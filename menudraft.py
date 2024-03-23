@@ -140,7 +140,7 @@ while True:
                         item_spaces = " " * num_item_spaces
                         print(f"{item_counter}      | "
                               + f"{key} - {key2}{item_spaces} | "
-                              + f"${value2}")
+                              + f"${value2:.2f}")
                         menu_items[item_counter] = {
                             'name': key2,
                             'price': value2
@@ -152,7 +152,7 @@ while True:
                     num_item_spaces = 24 - len(key)
                     item_spaces = " " * num_item_spaces
                     print(f"{item_counter}      | "
-                          + f"{key}{item_spaces} | ${value}")
+                          + f"{key}{item_spaces} | ${value:.2f}")
                     menu_items[item_counter] = {
                             'name': key,
                             'price': value
@@ -239,17 +239,17 @@ print("-" * 50)
 
 # Count instances of each order
 print("You purchased: ")
-
-# Loop through the full order list
-for menu_index in range(len(menu_items)):
-    menu_count = menu_selection[menu_index]
-    menu_name = menu_selection[menu_index]
-    quantity_choice = menu_selection [menu_index]
-
-    # If the order count is greater than or equal to 1:
-    if menu_count >= 1:
-        # Gather the count of each order in the order list and print them alongside the orders
-
-        print("Item # | Item name                | Quantity")
-        print("-------|--------------------------|---------")
-        print(f"{menu_count} {menu_choice} {'quantity'}")
+print("Item name                | Price  | Quantity")
+print("-------------------------|--------|----------")
+for selection in menu_selection:
+    # Gather the count of each order in the order list and print them alongside the orders
+    # Print the menu item
+    item_name_spaces_count = 24 - len(selection['Item name']) - 1
+    item_name_spaces = " " * item_name_spaces_count
+    if selection['Price'] >= 10.0:
+        price_spaces_count = 0
+    else:
+        price_spaces_count = 1
+    price_spaces = " " * price_spaces_count
+    print(f"{selection['Item name']}${item_name_spaces} | " +
+        f"${selection['Price']:.2f}{price_spaces} | {selection['Quantity']}")
