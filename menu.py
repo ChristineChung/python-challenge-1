@@ -1,4 +1,4 @@
-#menu
+#CC's Petite Boucherie Menu
 
 #Empty List to store customer order
 
@@ -258,4 +258,6 @@ for selection in menu_selection:
  # Calculate and display the total sum of the order
 total_price = sum(item['Price'] * item['Quantity'] for item in menu_selection)
 print("-" * 45)
-print(f"Total: ${total_price:.2f}")
+print(f"Total: ${total_price:.2f}") 
+
+    break
