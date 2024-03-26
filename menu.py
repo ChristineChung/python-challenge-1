@@ -259,5 +259,3 @@ for selection in menu_selection:
 total_price = sum(item['Price'] * item['Quantity'] for item in menu_selection)
 print("-" * 45)
 print(f"Total: ${total_price:.2f}") 
-
-    break
