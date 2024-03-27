@@ -1,7 +1,7 @@
 # python-challenge-1
 Module 2 Challenge 
 
-**CC's Petite Boucherie Menu**
+**CC's Petite Boucherie Food Truck Menu**
 This is an interactive restaurant menu program designed to assist customers in browsing through menu items, placing orders, and calculating the total bill. Customers can view the menu items categorized into Appetizers, Main Courses, Drinks, and Desserts, select items of their choice, specify quantities, and receive a summary of their order.
 
 # CC's Petite Boucherie Menu
