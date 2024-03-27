@@ -1,4 +1,4 @@
-#CC's Petite Boucherie Menu
+#CC's Petite Boucherie Food Truck Menu
 
 #Empty List to store customer order
 
